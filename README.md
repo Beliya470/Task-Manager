@@ -1,109 +1,53 @@
-# Task Manager API
+<div align="center">
 
-A Laravel REST API for managing tasks with priority levels and status tracking. Built with Laravel 13 and SQLite (no database setup needed).
+# ✅ Task Manager
 
-**Author:** Anne Anziya — beliya.anziya2022@gmail.com
+### Stay organized. Ship faster. Built with Laravel & Blade.
 
----
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![Blade](https://img.shields.io/badge/Blade-F7522F?style=for-the-badge&logo=laravel&logoColor=white)
 
-## Quick Start
+<img src="https://raw.githubusercontent.com/bornmay/bornmay/Update/svg/Bottom.svg" width="100%"/>
 
-```bash
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
-php artisan serve
-```
+</div>
 
-Open http://localhost:8000
+## ✨ Overview
 
----
+A modern task management web app built with Laravel and Blade templates. Designed to feel fast, friendly, and frictionless — because a to-do list should help you, not slow you down.
 
-## Requirements
+## 🚀 Features
 
-- PHP 8.2+
-- Composer
+- ➕ Create, update & delete tasks\n- 🗂️ Organize by status & priority\n- 🔐 User authentication\n- 💅 Clean Blade UI\n- ⚡ Built on Laravel best practices
 
-No database setup needed — uses SQLite out of the box.
+## 🛠️ Built With
 
-## Local Setup
+The full tech stack and tooling that powers this project — see badges above.
 
-1. Install dependencies
-   ```bash
-   composer install
-   ```
-
-2. Set up environment
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-
-3. Run migrations and seed sample data
-   ```bash
-   php artisan migrate --seed
-   ```
-
-4. Start the server
-   ```bash
-   php artisan serve
-   ```
-
-The API is at `http://localhost:8000/api`. The frontend is at `http://localhost:8000`.
-
-## API Endpoints
-
-### Create a Task
-```bash
-curl -X POST http://localhost:8000/api/tasks \
-  -H "Content-Type: application/json" \
-  -d '{"title": "Fix login bug", "due_date": "2026-04-05", "priority": "high"}'
-```
-
-### List All Tasks
-```bash
-curl http://localhost:8000/api/tasks
-```
-
-### Filter by Status
-```bash
-curl "http://localhost:8000/api/tasks?status=pending"
-```
-
-### Update Task Status
-```bash
-curl -X PATCH http://localhost:8000/api/tasks/1/status \
-  -H "Content-Type: application/json" \
-  -d '{"status": "in_progress"}'
-```
-
-### Delete a Task (must be done)
-```bash
-curl -X DELETE http://localhost:8000/api/tasks/1
-```
-
-### Daily Report
-```bash
-curl "http://localhost:8000/api/tasks/report?date=2026-03-29"
-```
-
-## Business Rules
-
-- Tasks start as `pending` by default
-- Same title cannot be used twice for the same due date
-- Due date must be today or in the future
-- Status moves forward only: `pending` → `in_progress` → `done`
-- Only completed tasks can be deleted
-
-## Running Tests
+## 📦 Getting Started
 
 ```bash
-php artisan test
+# clone the repo
+git clone https://github.com/Beliya470/Task-Manager.git
+cd Task-Manager
+
+# install & run (see project files for specifics)
 ```
 
-Tests use SQLite in-memory — no setup needed, just run and go.
+## 🤝 Contributing
 
-## Database
+Contributions, issues and feature requests are welcome! Feel free to open an issue or submit a PR.
 
-SQL dump is available at `database/task_manager.sql`
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## 👩‍💻 Author
+
+**Anne Beliya Anziya**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anne-anziya-226b76128)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Beliya470)
+
+<div align="center">
+
+⭐ If you found this project useful, consider giving it a star!
+
+</div>
